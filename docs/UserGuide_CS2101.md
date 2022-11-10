@@ -114,8 +114,7 @@ To check if you have Java `11` or above installed, follow the steps for your ope
 **Teacher's Pet** is divided into 5 areas to maximise productivity:
 
 1. Command Input - The dialog box where you will input your desired commands.
-2. Command Result - A short answer whether **Teacher's Pet** has executed the command, or an error message if the
-  **Teacher's Pet** did not understand the command.
+2. Command Result - A short answer whether **Teacher's Pet** has executed the command, or an error message if **Teacher's Pet** did not understand the command.
 3. Student List - A window that will display the details of the student(s).
 4. Statistics Window - A window that shows all the statistics of the tutor, such as the number of students and
 the money collected/owed.
@@ -155,7 +154,7 @@ application from top to bottom as the illustrations added follow a sequential or
 | Parameters with a [prefix](#prefix-summary) can be in any order                                                                                                                                     | `n/NAME p/CONTACT_NUMBER` or `p/CONTACT_NUMBER n/NAME` are acceptable                                                                                                                                                                                 |
 | A parameter expected once will have only it's last occurrence taken despite being specified multiple times                                                                                          | If you specify `p/12341234 p/56785678`, only `p/56785678` will be accepted by **Teacher's Pet**.                                                                                                                                                      |
 | Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, `exit` and `clear`) will be ignored                                                                      | If the you type `help 123`, the command will be interpreted as `help`.                                                                                                                                                                                |
-| An index will be [`INDEX-S`](#glossary) if the command requries information from the [Schedule List](#ui-overview) and will be `INDEX` if it requires information from [Student List](#ui-overview) | Under [mark command](#marking-a-student-mark), `mark 1` will mark the 1st student in the [Schedule List](#ui-overview). Under [delete command](#deleting-students-delete), `delete 1` will remove the first student from [Student List](#ui-overview) |
+| An index will be [`INDEX-S`](#glossary) if the command requires information from the [Schedule List](#ui-overview) and will be `INDEX` if it requires information from [Student List](#ui-overview) | Under [mark command](#marking-a-student-mark), `mark 1` will mark the 1st student in the [Schedule List](#ui-overview). Under [delete command](#deleting-students-delete), `delete 1` will remove the first student from [Student List](#ui-overview) |
 
 ### Callouts:
 
