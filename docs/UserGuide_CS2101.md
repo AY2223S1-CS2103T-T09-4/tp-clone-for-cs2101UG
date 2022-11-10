@@ -299,7 +299,7 @@ under a student.
 The following are the fields accepted by the `edit` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-##### Student's Name (`n/`), Student's Contact Number (`p/`), Next of Kin’s Contact Number (`np/`), Email (`e/`), Address (`a/`) and Tag (`t`) follow the same convention as [adding a student](#adding-a-student-add).
+##### Student's Name (`n/`), Student's Contact Number (`p/`), Next of Kin’s Contact Number (`np/`), Email (`e/`), Address (`a/`) and Tag (`t/`) follow the same convention as [adding a student](#adding-a-student-add).
 
 ##### Class Date (`dt/`):
 - Class date can be left empty.
