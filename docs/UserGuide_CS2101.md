@@ -209,14 +209,14 @@ The `add` command adds a student to **Teacher’s Pet**.
 The following are the fields accepted by the `add` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-##### Student’s Name:
+##### Student’s Name (`n/`):
     - Student’s Name must not be empty.
     - Student’s Name must only contain alphanumeric characters.
     
 <div markdown="span" class="alert alert-info">ℹ **Note:** Multiple students may share the same name.
 </div>
 
-##### Student’s Contact Number:
+##### Student’s Contact Number (`p/`):
 - Student’s contact number must not be empty. 
 - Student’s contact number must only contain numerical digits between `0` and `9`.
 - Student's contact number must begin with `6`, `8` or `9`.
@@ -224,7 +224,7 @@ command to work as expected.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Contact number must contain exactly 8 digits. Contact number must be unique.
 </div>
 
-##### Next of Kin’s Contact Number:
+##### Next of Kin’s Contact Number (`np/`):
 - Next of Kin’s contact number must not be empty.
 - Next of Kin’s contact number must only contain numerical digits 
   between `0` and `9`.
@@ -234,14 +234,14 @@ command to work as expected.
 </div>
 
 
-##### Address:
+##### Address (`a/`):
 - Address must not be empty.
 - Address may contain any kinds of character.
 
 <div markdown="span" class="alert alert-info">ℹ **Note:** Address cannot be empty. It must contain at least 1 character.
 </div>
 
-##### Email:
+##### Email (`e/`):
 
 - Email must not be empty. 
 - Email should be in the format of `local@domain`, where:
@@ -254,7 +254,7 @@ command to work as expected.
     3. Have each domain label consist of alphanumeric characters, separated
        only by hyphens, if any.
 
-##### Tags:
+##### Tags (`t/`):
 - Tags are optional.
 - A student can have any number of tags (including 0).
 - Tags must only contain alphanumeric characters.
@@ -284,24 +284,24 @@ a student named Ben Tan will be added to the bottom of the [Student List](#ui-ov
 The `edit` command edits an existing student under [Student List](#ui-overview). You can edit the following fields 
 under a student.
 
-- Student’s Name
-- Student's Contact Number
-- Next of Kin’s Contact Number
-- Address
-- Email
-- Class Date
-- Amount Paid
-- Amount Owed
-- Rates per Class
-- Additional Notes
-- Tag
+- Student’s Name - `n/`
+- Student's Contact Number - `p/`
+- Next of Kin’s Contact Number - `np/`
+- Address - `a/`
+- Email - `e/`
+- Class Date - `dt/`
+- Amount Paid - `paid/`
+- Amount Owed - `owed/`
+- Rates per Class - `rate/`
+- Additional Notes - `nt/`
+- Tag - `t/`
 
 The following are the fields accepted by the `edit` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-##### Student's Name, Student's Contact Number, Next of Kin’s Contact Number, Email, Address and Tag follow the same convention as [adding a student](#adding-a-student-add).
+##### Student's Name (`n/`), Student's Contact Number (`p/`), Next of Kin’s Contact Number (`np/`), Email (`e/`), Address (`a/`) and Tag (`t`) follow the same convention as [adding a student](#adding-a-student-add).
 
-##### Class Date:
+##### Class Date (`dt/`):
 - Class date can be left empty.
 - Formats: `dt/` must be followed by either one of the below options.
     1. `yyyy-MM-dd 0000-2359`
@@ -316,25 +316,25 @@ command to work as expected.
 <div markdown="span" class="alert alert-danger">❗ **Caution:** If a chosen date is occupied by another student, a class conflict error will arise.
 </div>
 
-##### Amount Paid:
+##### Amount Paid (`paid/`):
 - Amount Paid stands for the amount that has been paid by the Student.
 - Format: `paid/` must be followed by an integer.
 - Amount paid can only be an integer.
 - Amount paid must be non-negative.
 
-##### Amount Owed:
+##### Amount Owed (`owed/`):
 - Amount Owed stands for the amount that has been owed by the Student.
 - Format: `owed/` must be followed by an integer.
 - Amount owed can only be an integer.
 - Amount owed must be non-negative.
 
-##### Rates per Class:
+##### Rates per Class (`rate/`):
 - Rates per Class stands for the amount of charge per Class for the Student.
 - Format: `rate/` must be followed by an integer.
 - Rates per Class can only be an integer.
 - Rates per Class must be non-negative.
 
-##### Additional Notes:
+##### Additional Notes (`nt/`):
 - Additional notes can be left empty.
 - Additional notes can take in any types of character.
 - Use `nt/` to set the additional notes.
