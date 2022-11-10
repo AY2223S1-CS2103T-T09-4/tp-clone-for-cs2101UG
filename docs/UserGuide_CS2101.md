@@ -18,7 +18,7 @@ In order to help speed up your workflow, we have created commands for tasks you 
 | Receive money from a student                                                          | [`pay` command](#receiving-money-from-a-student-pay)                                            |
 | Know the students you have                                                           | [`list` command](#viewing-all-students-list)                                                    |
 | Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                                | [`avail` command](#next-available-class-avail)                                                  |
+| Find next available class for student                                                | [`avail` command](#next-available-class)                                                  |
 | Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
 | Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
 | Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                                              |
