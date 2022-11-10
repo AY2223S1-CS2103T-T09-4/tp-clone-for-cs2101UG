@@ -1,0 +1,41 @@
+@startuml
+!include style.puml
+skinparam arrowThickness 1.1
+skinparam arrowColor MODEL_COLOR
+skinparam classBackgroundColor MODEL_COLOR
+
+TeachersPet *-right-> "1" UniqueStudentList
+TeachersPet *-right-> "1" UniqueScheduleList
+TeachersPet *-right-> "1" UniqueTagList
+UniqueTagList -[hidden]down- UniqueStudentList
+UniqueTagList -[hidden]down- UniqueStudentList
+
+UniqueTagList *-right-> "*" Tag
+UniqueStudentList -right-> Student
+UniqueScheduleList -right-> Student
+
+Student -up-> "*" Tag
+
+Student *--> Name
+Student *--> Phone
+Student *--> NokPhone
+Student *--> Email
+Student *--> Address
+Student *--> Class
+Student *--> MoneyOwed
+Student *--> MoneyPaid
+Student *--> RatesPerClass
+Student *--> AdditionalNotes
+Student *--> Mark
+
+Name -[hidden]right-> Phone
+Phone -[hidden]right-> NokPhone
+NokPhone -[hidden]right-> Address
+Address -[hidden]right-> Email
+Name -[hidden]down-> Class
+Class -[hidden]right-> MoneyOwed
+MoneyOwed -[hidden]right-> MoneyPaid
+MoneyPaid -[hidden]right-> RatesPerClass
+RatesPerClass -[hidden]right-> AdditionalNotes
+AdditionalNotes -[hidden]right-> Mark
+@enduml
