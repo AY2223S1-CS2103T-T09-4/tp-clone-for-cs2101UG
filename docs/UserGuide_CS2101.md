@@ -418,8 +418,7 @@ Example:
 ![UiPay](images/UG-screenshots/UiPayBefore.png)
 ![UiPay](images/UG-screenshots/UiPayAfter.png)
 
-<div markdown="span" class="alert alert-info">ℹ **Note:** The student cannot pay more than what he/she owes. There is also a maximum cap of
-  $2147483647 for every payment.
+<div markdown="span" class="alert alert-info">ℹ **Note:** The student cannot pay more than what he/she owes.
 </div>
 
 [↑ Back to top](#table-of-contents)
