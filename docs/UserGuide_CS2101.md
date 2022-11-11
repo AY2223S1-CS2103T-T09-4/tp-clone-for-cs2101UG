@@ -757,6 +757,17 @@ Q: How do I transfer my data to another Computer?
 
 A: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous **Teacher's Pet** home folder.
 
+Q: Do I need to save my data before exiting the application?
+
+A: Student records are automatically saved after any command that changes the data. There is no need to save manually.
+
+Q: Why is Teacher's Pet not running?
+
+A: Follow the following procedure to open the application correctly.
+1. Put the JAR file in an empty folder.
+2. Open Command Prompt if you are using Windows or Terminal if you are using macOS. Run the java -version command to ensure you are using Java 11. Do this again even if you did this before, as your OS might have auto-updated the default Java version to a newer version.
+3. Launch the jar file using the java -jar teachersPet.jar command.
+
 [↑ Back to top](#table-of-contents)
 
 ---
