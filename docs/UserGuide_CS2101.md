@@ -21,7 +21,7 @@ In order to help speed up your workflow, we have created commands for tasks you 
 | Find next available class in your schedule                                           | [sequence of commands](#next-available-class)                                                   |
 | Set a student's class                                                                | [`edit` command](#editing-student-details-edit)                                                 |
 | Take notes                                                                           | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                   |
+| Remove a student                                                                     | [`delete` command](#deleting-students-delete)                                                   |
 
 Before you get started, you may want to know [how to navigate this User Guide](#reading-the-user-guide).
 
@@ -144,15 +144,15 @@ application from top to bottom as the illustrations added follow a sequential or
 
 ### Notes about the command format:
 
-| Format                                                                                                                                                                                              | Example                                                                                                                                                                                                                                              |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Words in `UPPER_CASE` are parameters supplied by you                                                                                                                                                | Given the following format, `add n/NAME`. In this case, `NAME` is a parameter which can be replaced by `John Doe`.                                                                                                                                   |
-| Items in square brackets are optional                                                                                                                                                               | Given `n/NAME [t/TAG]`, since `t/TAG` is in square brackets, you can type either `n/John Doe t/python` or `n/John Doe` if no tag is required.                                                                                                        |
-| Items with `…` after them can be used 0 or more times                                                                                                                                               | Given `[t/TAG]…`, you can choose to not type anything, `t/python` for one tag, `t/javascript t/react` for two tags and etc.                                                                                                                          |
-| Parameters with a [prefix](#prefix-summary) can be in any order                                                                                                                                     | `n/NAME p/CONTACT_NUMBER` or `p/CONTACT_NUMBER n/NAME` are acceptable.                                                                                                                                                                               |
-| A parameter expected once will have only it's last occurrence taken despite being specified multiple times                                                                                          | If you specify `p/82341234 p/86785678`, only `p/86785678` will be accepted by **Teacher's Pet**.                                                                                                                                                     |
-| Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, `exit` and `clear`) will be ignored                                                                      | If you type `help 123`, the command will be interpreted as `help`.                                                                                                                                                                                   |
-| An index will be [`INDEX-S`](#glossary) if the command requires information from the [Schedule List](#ui-overview) and will be `INDEX` if it requires information from [Student List](#ui-overview) | Under [mark command](#marking-a-student-mark), `mark 1` will mark the 1st student in the [Schedule List](#ui-overview). Under [delete command](#deleting-students-delete), `delete 1` will remove the 1st student from [Student List](#ui-overview). |
+| Format                                                                                                                                                                                                           | Example                                                                                                                                                                                                                                              |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Words in `UPPER_CASE` are parameters supplied by you                                                                                                                                                             | Given the following format, `add n/NAME`. In this case, `NAME` is a parameter which can be replaced by `John Doe`.                                                                                                                                   |
+| Items in square brackets are optional                                                                                                                                                                            | Given `n/NAME [t/TAG]`, since `t/TAG` is in square brackets, you can type either `n/John Doe t/python` or `n/John Doe` if no tag is required.                                                                                                        |
+| Items with `…` after them can be used 0 or more times                                                                                                                                                            | Given `[t/TAG]…`, you can choose to not type anything, `t/python` for one tag, `t/javascript t/react` for two tags and etc.                                                                                                                          |
+| Parameters with a [prefix](#prefix-summary) can be in any order                                                                                                                                                  | `n/NAME p/CONTACT_NUMBER` or `p/CONTACT_NUMBER n/NAME` are acceptable.                                                                                                                                                                               |
+| A parameter expected once will have only it's last occurrence taken despite being specified multiple times                                                                                                       | If you specify `p/82341234 p/86785678`, only `p/86785678` will be accepted by **Teacher's Pet**.                                                                                                                                                     |
+| Extraneous parameters for commands that do not take in parameters (such as `help`, `list`, `exit` and `clear`) will be ignored                                                                                   | If you type `help 123`, the command will be interpreted as `help`.                                                                                                                                                                                   |
+| An index will be [`INDEX-S`](#glossary) if the command requires information from the [Schedule List](#ui-overview) and will be [`INDEX`](#glossary) if it requires information from [Student List](#ui-overview) | Under [mark command](#marking-a-student-mark), `mark 1` will mark the 1st student in the [Schedule List](#ui-overview). Under [delete command](#deleting-students-delete), `delete 1` will remove the 1st student from [Student List](#ui-overview). |
 
 ### Annotations
 
@@ -183,7 +183,7 @@ These are the main features of **Teacher's Pet**:
 | Find next available class for student                                               | [sequence of commands](#next-available-class)                                                   |
 | Set a student's next class                                                          | [`edit` command](#editing-student-details-edit)                                                 |
 | Taking notes                                                                        | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he quits the tuition                                            | [`delete` command](#deleting-students-delete)                                                   |
+| Remove a student                                                                    | [`delete` command](#deleting-students-delete)                                                   |
 
 ### Viewing help: `help`
 
@@ -202,12 +202,12 @@ Format: `help`
 
 The `add` command adds a student to **Teacher’s Pet**. You can add the following fields to a student.
 
-- [Student’s Name (`n/`)](#add-students-name)
-- [Student's Contact Number (`p/`)](#add-students-contact-number)
-- [Next of Kin’s Contact Number (`np/`)](#add-next-of-kins-contact-number)
-- [Address (`a/`)](#add-address)
-- [Email (`e/`)](#add-email)
-- [Tag (`t/`)](#add-tag)
+- [Student’s Name (`n/`)](#add-students-name-n)
+- [Student's Contact Number (`p/`)](#add-students-contact-number-p)
+- [Next of Kin’s Contact Number (`np/`)](#add-next-of-kins-contact-number-np)
+- [Address (`a/`)](#add-address-a)
+- [Email (`e/`)](#add-email-e)
+- [Tag (`t/`)](#add-tag-t)
 
 The following are the fields accepted by the `add` command and their relevant conditions which need to be met for the
 command to work as expected.
@@ -287,17 +287,17 @@ under a student.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Student's Name, Student's Contact Number, Next of Kin’s Contact Number, Email, Address and Tag follow the same convention as under the add command.
 </div>
 
-- [Student’s Name `n/`](#add-students-name)
-- [Student's Contact Number `p/`](#add-students-contact-number)
-- [Next of Kin’s Contact Number `np/`](#add-next-of-kins-contact-number)
-- [Address `a/`](#add-address)
-- [Email `e/`](#add-email)
-- [Tag `t/`](#add-tag)
-- [Class Date `dt/`](#edit-class-date)
-- [Amount Paid `paid/`](#edit-amount-paid)
-- [Amount Owed `owed/`](#edit-amount-owed)
-- [Rates per Class `rate/`](#edit-rates-per-class)
-- [Additional Notes `nt/`](#edit-additional-notes)
+- [Student’s Name `n/`](#add-students-name-n)
+- [Student's Contact Number `p/`](#add-students-contact-number-p)
+- [Next of Kin’s Contact Number `np/`](#add-next-of-kins-contact-number-np)
+- [Address `a/`](#add-address-a)
+- [Email `e/`](#add-email-e)
+- [Tag `t/`](#add-tag-t)
+- [Class Date `dt/`](#edit-class-date-dt)
+- [Amount Paid `paid/`](#edit-amount-paid-paid)
+- [Amount Owed `owed/`](#edit-amount-owed-owed)
+- [Rates per Class `rate/`](#edit-rates-per-class-rate)
+- [Additional Notes `nt/`](#edit-additional-notes-nt)
 
 The following are the fields accepted by the `edit` command and their relevant conditions which need to be met for the
 command to work as expected.
@@ -355,8 +355,8 @@ Examples:
 ![UiEdit](images/UG-screenshots/UiEditBefore.png)
 ![UiEdit](images/UG-screenshots/UiEditAfter.png)
 
-- Type `edit 7 dt/2022-11-07 1200-1300` in the [Command Input](#ui-overview). The index 1 student of the
-  [Student List](#ui-overview) will have his or her class date updated to `2022-10-30 1100-1200` 
+- Type `edit 7 dt/2022-11-07 1200-1300` in the [Command Input](#ui-overview). The index 7 student of the
+  [Student List](#ui-overview) will have his or her class date updated to `2022-11-07 1200-1300` 
   in this case. Notice that the [Schedule List](#ui-overview) has now been updated.
 
 ![UiEdit2](images/UG-screenshots/UiEditBefore2.png)
@@ -376,9 +376,9 @@ When a student has been `mark`ed, a couple of things will happen.
 1. **Teacher's Pet** will increase the student's owed amount by the rates per class.
 2. A cross will be displayed beside the student's name indicating that the student has attended the class.
 
-Format: `mark INDEX-s`
+Format: `mark INDEX-S`
 
-- Marks the student as present based on [`INDEX-s`](#glossary) which is the index on the right panel.
+- Marks the student as present based on [`INDEX-S`](#glossary) which is the index on the right panel.
 - The index refers to the index number shown in [Schedule List](#ui-overview).
 - The index must be a positive integer. e.g., `1, 2, 3, ...`.
 
@@ -400,9 +400,9 @@ The `pay` command indicates that a student has paid a certain amount of money.
 
 **Teacher's Pet** will reduce the student's owed amount by the amount paid.
 
-Format: `pay INDEX-s AMOUNT_PAID`
+Format: `pay INDEX-S AMOUNT_PAID`
 
-- Indicates that the student at a specified `INDEX-s` has paid.
+- Indicates that the student at a specified `INDEX-S` has paid.
 - The index refers to the index number shown in the [Schedule List](#ui-overview) (bottom right).
 - The index must be a positive integer. e.g., `1, 2, 3, ...`.
 - The amount paid must be an integer and cannot be negative. e.g., `0, 1, 2, ...`.
@@ -625,9 +625,9 @@ The following are fields supported by the `sort` command:
 
 #### Sort by Name
 
-Sorts the list of students in the [Student List](#ui-overview) by `name` and given `ORDER`.
+Sorts the list of students in the [Student List](#ui-overview) by `NAME` and given `ORDER`.
 
-If `ORDER` is left blank, it will be `asc` by default.
+If `ORDER` is left blank, it will be `ASC` by default.
 
 Examples:
 
@@ -679,7 +679,7 @@ Format: `delete INDEX [MORE_INDEXES]`
 
 - Deletes the student(s) at the specified `INDEX(ES)`.
 - The index(es) refers to the index numbers shown in the [Student List](#ui-overview) (bottom left section of the display).
-- The index(es) must be found on the displayed student list. e.g., `1, 2, 3, ...`.
+- The index(es) must be found on the [Student List](#ui-overview). e.g., `1, 2, 3, ...`.
 
 Examples:
 - `list` followed by `delete 1 2` deletes the 1st and 2nd student in the [Student List](#ui-overview).
@@ -773,6 +773,7 @@ A: Follow the following procedure to open the application correctly.
 ---
 ## Glossary
 
+<<<<<<< HEAD
 | Terms       | Definition                                                                                  |
 |-------------|---------------------------------------------------------------------------------------------|
 | Class Date  | The 1-1 tutoring time slot of a student                                                     |
@@ -781,6 +782,25 @@ A: Follow the following procedure to open the application correctly.
 | INDEX-s     | The index number shown in the [Schedule List](#ui-overview)                                 |
 | Prefix      | The form to indicate a specific type of information. e.g., `n/`, `p/`, `e/`                 |
 | Parameter   | The additional input provided along with the command word. e.g., `NAME`, `EMAIL`, `ADDRESS` |
+||||||| cd747a7
+| Terms       | Definition                                                  |
+|-------------|-------------------------------------------------------------|
+| Class Date  | The 1-1 tutoring time slot of a student                     |
+| Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON      |
+| INDEX       | The index number shown in the [Student List](#ui-overview)  |
+| INDEX-s     | The index number shown in the [Schedule List](#ui-overview) |
+| Prefix      | e.g., `n/`, `p/`, `np/`                                     |
+| Parameter   | e.g., `NAME`, `EMAIL`, `ADDRESS`                            |
+=======
+| Terms       | Definition                                                  |
+|-------------|-------------------------------------------------------------|
+| Class Date  | The 1-1 tutoring time slot of a student                     |
+| Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON      |
+| INDEX       | The index number shown in the [Student List](#ui-overview)  |
+| INDEX-S     | The index number shown in the [Schedule List](#ui-overview) |
+| Prefix      | e.g., `n/`, `p/`, `np/`                                     |
+| Parameter   | e.g., `NAME`, `EMAIL`, `ADDRESS`                            |
+>>>>>>> 86c73662f608ecc0cc5801fd66d03c023d63945f
 
 [↑ Back to top](#table-of-contents)
 
@@ -788,21 +808,21 @@ A: Follow the following procedure to open the application correctly.
 
 [](#exiting-the-program-exit)
 
-| Action                                                                 | Format, Examples                                                                                                                                                                                                                                        |
-|------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Get help](#viewing-help-help)                                         | `help`                                                                                                                                                                                                                                                  |
-| [Add a student](#adding-a-student-add)                                 | add n/NAME p/CONTACT_NUMBER np/NEXT_OF_KIN_CONTACT_NUMBER a/ADDRESS e/EMAIL [t/TAG]... e.g., `add n/John Doe p/98765432 np/90123291 a/Street ABC e/johnd@example.com t/python t/beginner`                                                               |
+| Action                                                                 | Format, Examples                                                                                                                                                                                                                                           |
+|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Get help](#viewing-help-help)                                         | `help`                                                                                                                                                                                                                                                     |
+| [Add a student](#adding-a-student-add)                                 | add n/NAME p/CONTACT_NUMBER np/NEXT_OF_KIN_CONTACT_NUMBER a/ADDRESS e/EMAIL [t/TAG]... e.g., `add n/John Doe p/98765432 np/90123291 a/Street ABC e/johnd@example.com t/python t/beginner`                                                                  |
 | [Edit a student](#editing-student-details-edit)                        | edit `INDEX` [n/NAME] [p/CONTACT_NUMBER] [np/NEXT_OF_KIN_CONTACT_NUMBER] [a/ADDRESS] [e/EMAIL] [dt/CLASS_DATE] [paid/AMOUNT_PAID] [owed/AMOUNT_OWED] [rate/RATES_PER_CLASS] [nt/ADDITIONAL_NOTES] [nt-a/ADDITIONAL_NOTES_APPEND] e.g., `edit 2 p/98765431` |
-| [Mark a student](#marking-a-student-mark)                              | mark `INDEX-s` e.g., `mark 2`                                                                                                                                                                                                                           |
-| [Receive money from a student](#receiving-money-from-a-student-pay)    | pay `INDEX-s` `AMOUNT_PAID` e.g., `pay 2 300`                                                                                                                                                                                                           |
-| [List all students](#viewing-all-students-list)                        | `list`                                                                                                                                                                                                                                                  |
-| [Find a student](#finding-a-student-find)                              | find n/NAME e.g., `find n/John Doe` or other supported fields                                                                                                                                                                                           |
-| [Find available time slots](#next-available-class)                     | refer to link under Action                                                                                                                                                                                                                              |
-| [Sort students in particular order](#sort-the-displayed-students-sort) | sort `TYPE` `[ORDER]` e.g., `sort NAME ASC`                                                                                                                                                                                                             |
-| [Delete a student](#deleting-students-delete)                          | delete `INDEX` e.g., `delete 2`                                                                                                                                                                                                                         |
-| [Clear all students](#clearing-all-student-clear)                      | `clear`                                                                                                                                                                                                                                                 |
-| [Undo a command](#undo-the-last-command-undo)                          | `undo`                                                                                                                                                                                                                                                  |
-| [Exit **Teacher's Pet**](#exiting-the-program-exit)                    | `exit`                                                                                                                                                                                                                                                  |
+| [Mark a student](#marking-a-student-mark)                              | mark `INDEX-S` e.g., `mark 2`                                                                                                                                                                                                                              |
+| [Receive money from a student](#receiving-money-from-a-student-pay)    | pay `INDEX-S` `AMOUNT_PAID` e.g., `pay 2 300`                                                                                                                                                                                                              |
+| [List all students](#viewing-all-students-list)                        | `list`                                                                                                                                                                                                                                                     |
+| [Find a student](#finding-a-student-find)                              | find n/NAME e.g., `find n/John Doe` or other supported fields                                                                                                                                                                                              |
+| [Find available time slots](#next-available-class)                     | refer to link under Action                                                                                                                                                                                                                                 |
+| [Sort students in particular order](#sort-the-displayed-students-sort) | sort `TYPE` `[ORDER]` e.g., `sort NAME ASC`                                                                                                                                                                                                                |
+| [Delete a student](#deleting-students-delete)                          | delete `INDEX` e.g., `delete 2`                                                                                                                                                                                                                            |
+| [Clear all students](#clearing-all-student-clear)                      | `clear`                                                                                                                                                                                                                                                    |
+| [Undo a command](#undo-the-last-command-undo)                          | `undo`                                                                                                                                                                                                                                                     |
+| [Exit **Teacher's Pet**](#exiting-the-program-exit)                    | `exit`                                                                                                                                                                                                                                                     |
 
 [↑ Back to top](#table-of-contents)
 
