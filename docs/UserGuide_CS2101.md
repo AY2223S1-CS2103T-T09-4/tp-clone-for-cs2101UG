@@ -30,9 +30,7 @@ To get started with using the application, jump straight to the [Quick Start](#q
 For a full list of commands and detailed instructions, head to the [Features](#features) section.
 
 <div markdown="span" class="alert alert-success">💡 **Tip:** If you ever need clarification on certain terms, you 
-can simplify head down to the bottom of the screen and refer to the  
-<a href="#glossary">glossary</a> section, <a href="#command-summary">command summary</a> for the summary of the 
-commands and <a href="#prefix-summary">prefix summary</a> for summary of prefixes!
+can simplify head down to the bottom of the screen and refer to the <a href="#glossary">glossary</a> section, <a href="#command-summary">command summary</a> for the summary of the commands and <a href="#prefix-summary">prefix summary</a> for summary of prefixes!
 </div>
 
 
