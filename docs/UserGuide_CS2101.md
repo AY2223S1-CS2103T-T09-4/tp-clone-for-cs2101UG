@@ -114,8 +114,7 @@ To check if you have Java `11` or above installed, follow the steps for your ope
 **Teacher's Pet** is divided into 5 areas to maximise productivity:
 
 1. Command Input - The dialog box where you will input your desired commands.
-2. Command Result - A short answer whether **Teacher's Pet** has executed the command, or an error message if the
-  **Teacher's Pet** did not understand the command.
+2. Command Result - A short answer whether **Teacher's Pet** has executed the command, or an error message if **Teacher's Pet** did not understand the command.
 3. Student List - A window that will display the details of the student(s).
 4. Statistics Window - A window that shows all the statistics of the tutor, such as the number of students and
 the money collected/owed.
@@ -205,24 +204,24 @@ Format: `help`
 
 The `add` command adds a student to **Teacher’s Pet**. You can add the following fields to a student.
 
-- [Student’s Name](#add-students-name)
-- [Student's Contact Number](#add-students-contact-number)
-- [Next of Kin’s Contact Number](#add-next-of-kins-contact-number)
-- [Address](#add-address)
-- [Email](#add-email)
-- [Tag](#add-tag)
+- [Student’s Name (`n/`)](#add-students-name)
+- [Student's Contact Number (`p/`)](#add-students-contact-number)
+- [Next of Kin’s Contact Number (`np/`)](#add-next-of-kins-contact-number)
+- [Address (`a/`)](#add-address)
+- [Email (`e/`)](#add-email)
+- [Tag (`t/`)](#add-tag)
 
 The following are the fields accepted by the `add` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-#### Add Student’s Name:
-    - Student’s Name must not be empty.
-    - Student’s Name must only contain alphanumeric characters.
+#### Add Student’s Name (`n/`):
+- Student’s Name must not be empty.
+- Student’s Name must only contain alphanumeric characters.
     
 <div markdown="span" class="alert alert-info">ℹ **Note:** Multiple students may share the same name.
 </div>
 
-#### Add Student’s Contact Number:
+#### Add Student’s Contact Number (`p/`):
 - Student’s contact number must not be empty. 
 - Student’s contact number must only contain numerical digits between `0` and `9`.
 - Student's contact number must begin with `6`, `8` or `9`.
@@ -230,7 +229,7 @@ command to work as expected.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Contact number must contain exactly 8 digits. Contact number must be unique.
 </div>
 
-#### Add Next of Kin’s Contact Number:
+#### Add Next of Kin’s Contact Number (`np/`):
 - Next of Kin’s contact number must not be empty.
 - Next of Kin’s contact number must only contain numerical digits 
   between `0` and `9`.
@@ -239,16 +238,14 @@ command to work as expected.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Next of Kin’s contact number must contain exactly 8 digits.
 </div>
 
-
-#### Add Address:
+#### Add Address (`a/`):
 - Address must not be empty.
 - Address may contain any kinds of character.
 
 <div markdown="span" class="alert alert-info">ℹ **Note:** Address cannot be empty. It must contain at least 1 character.
 </div>
 
-#### Add Email:
-
+#### Add Email (`e/`):
 - Email must not be empty. 
 - Email should be in the format of `local@domain`, where:
   - Local address should only contain alphanumeric characters and these special 
@@ -260,7 +257,7 @@ command to work as expected.
     3. Have each domain label consist of alphanumeric characters, separated
        only by hyphens, if any.
 
-#### Add Tag:
+#### Add Tag (`t/`):
 - Tags are optional.
 - A student can have any number of tags (including 0).
 - Tags must only contain alphanumeric characters.
@@ -292,22 +289,22 @@ under a student.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Student's Name, Student's Contact Number, Next of Kin’s Contact Number, Email, Address and Tag follow the same convention as under the add command.
 </div>
 
-- [Student’s Name](#add-students-name)
-- [Student's Contact Number](#add-students-contact-number)
-- [Next of Kin’s Contact Number](#add-next-of-kins-contact-number)
-- [Address](#add-address)
-- [Email](#add-email)
-- [Tag](#add-tag)
-- [Class Date](#edit-class-date)
-- [Amount Paid](#edit-amount-paid)
-- [Amount Owed](#edit-amount-owed)
-- [Rates per Class](#edit-rates-per-class)
-- [Additional Notes](#edit-additional-notes)
+- [Student’s Name `n/`](#add-students-name)
+- [Student's Contact Number `p/`](#add-students-contact-number)
+- [Next of Kin’s Contact Number `np/`](#add-next-of-kins-contact-number)
+- [Address `a/`](#add-address)
+- [Email `e/`](#add-email)
+- [Tag `t/`](#add-tag)
+- [Class Date `dt/`](#edit-class-date)
+- [Amount Paid `paid/`](#edit-amount-paid)
+- [Amount Owed `owed/`(#edit-amount-owed)
+- [Rates per Class `rate/`](#edit-rates-per-class)
+- [Additional Notes `nt/`](#edit-additional-notes)
 
 The following are the fields accepted by the `edit` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-#### Edit Class Date:
+#### Edit Class Date (`dt/`):
 - Class date can be left empty.
 - Formats: `dt/` must be followed by either one of the below options.
     1. `yyyy-MM-dd 0000-2359`
@@ -322,25 +319,25 @@ command to work as expected.
 <div markdown="span" class="alert alert-danger">❗ **Caution:** If a chosen date is occupied by another student, a class conflict error will arise.
 </div>
 
-#### Edit Amount Paid:
+#### Edit Amount Paid (`paid/`):
 - Amount Paid stands for the amount that has been paid by the Student.
 - Format: `paid/` must be followed by an integer.
 - Amount paid can only be an integer.
 - Amount paid must be non-negative.
 
-#### Edit Amount Owed:
+#### Edit Amount Owed (`owed/`):
 - Amount Owed stands for the amount that has been owed by the Student.
 - Format: `owed/` must be followed by an integer.
 - Amount owed can only be an integer.
 - Amount owed must be non-negative.
 
-#### Edit Rates per Class:
+#### Edit Rates per Class (`rate/`):
 - Rates per Class stands for the amount of charge per Class for the Student.
 - Format: `rate/` must be followed by an integer.
 - Rates per Class can only be an integer.
 - Rates per Class must be non-negative.
 
-#### Edit Additional Notes:
+#### Edit Additional Notes (`nt/`)
 - Additional notes can be left empty.
 - Additional notes can take in any types of character.
 - Use `nt/` to set the additional notes.
@@ -420,8 +417,7 @@ Example:
 ![UiPay](images/UG-screenshots/UiPayBefore.png)
 ![UiPay](images/UG-screenshots/UiPayAfter.png)
 
-<div markdown="span" class="alert alert-info">ℹ **Note:** The student cannot pay more than what he/she owes. There is also a maximum cap of
-  $2147483647 for every payment.
+<div markdown="span" class="alert alert-info">ℹ **Note:** The student cannot pay more than what he/she owes.
 </div>
 
 [↑ Back to top](#table-of-contents)
