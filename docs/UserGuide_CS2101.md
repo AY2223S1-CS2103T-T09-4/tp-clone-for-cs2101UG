@@ -205,12 +205,12 @@ Format: `help`
 
 The `add` command adds a student to **Teacher’s Pet**. You can add the following fields to a student.
 
-- [Student’s Name](#add-students-name)
-- [Student's Contact Number](#add-students-contact-number)
-- [Next of Kin’s Contact Number](#add-next-of-kins-contact-number)
-- [Address](#add-address)
-- [Email](#add-email)
-- [Tag](#add-tag)
+- [Student’s Name (`n/`)](#add-students-name)
+- [Student's Contact Number (`p/`)](#add-students-contact-number)
+- [Next of Kin’s Contact Number (`np/`)](#add-next-of-kins-contact-number)
+- [Address (`a/`)](#add-address)
+- [Email (`e/`)](#add-email)
+- [Tag (`t/`)](#add-tag)
 
 The following are the fields accepted by the `add` command and their relevant conditions which need to be met for the
 command to work as expected.
