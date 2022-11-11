@@ -2,25 +2,25 @@
 layout: page
 title: **Teacher's Pet** User Guide
 ---
-**Teacher’s Pet** is an all-in-one desktop application for private 1-to-1 tutors to manage the details of students,
-payment and scheduling of classes. **Teacher's Pet** combines the tasks you would typically need to do when you use 
-Microsoft Excel, calendar, your phone contacts and your notes application into one application, reducing the need for
-context switching. With short commands and an intuitive design, **Teacher's Pet** reduces time needed 
-for tedious administrative work, allowing you to focus on your students.
+**Teacher’s Pet** is an all-in-one desktop application for 1-to-1 tutors to manage the details of students,
+payment and scheduling of classes. Instead of switching between calendar, contacts, notes and Microsoft Excel,
+**Teacher's Pet** consolidates your tasks into one application, reducing the need for
+context switching. Complete with an intuitive design and easy-to-use commands, **Teacher's Pet** lightens 
+the load of tedious administrative work, allowing you to focus on your students.
 
 In order to help speed up your workflow, we have created commands for tasks you would usually need to do as a tutor.
 
 | Task                                                                                 | Command                                                                                         |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | Add a new student                                                                    | [`add` command](#adding-a-student-add)                                                          |
-| Edit a student's details (phone number, address for example)                         | [`edit` command](#editing-student-details-edit)                                                 |
+| Edit a student's details (e.g. phone number, address)                                | [`edit` command](#editing-student-details-edit)                                                 |
 | Mark a student's attendance and remind yourself to collect payment from the student. | [`mark` command](#marking-a-student-mark)                                                       |
 | Receive money from a student                                                         | [`pay` command](#receiving-money-from-a-student-pay)                                            |
-| View the students under you                                                          | [`list` command](#viewing-all-students-list)                                                    |
-| Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                                | [sequence of commands](#next-available-class)                                                   |
-| Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
-| Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
+| View your students                                                                   | [`list` command](#viewing-all-students-list)                                                    |
+| Search for a student's information                                                   | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
+| Find next available class in your schedule                                           | [sequence of commands](#next-available-class)                                                   |
+| Set a student's class                                                                | [`edit` command](#editing-student-details-edit)                                                 |
+| Take notes                                                                           | [`edit` command](#editing-student-details-edit)                                                 | 
 | Remove a student                                                                     | [`delete` command](#deleting-students-delete)                                                   |
 
 Before you get started, you may want to know [how to navigate this User Guide](#reading-the-user-guide).
@@ -175,14 +175,14 @@ These are the main features of **Teacher's Pet**:
 | Task                                                                                | Command                                                                                         |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | Add a new student                                                                   | [`add` command](#adding-a-student-add)                                                          |
-| Edit a student's details (phone number, address for example)                        | [`edit` command](#editing-student-details-edit)                                                 |
+| Edit a student's details (e.g. phone number, address)                               | [`edit` command](#editing-student-details-edit)                                                 |
 | Mark a student's attendance and remind yourself to collect payment from the student | [`mark` command](#marking-a-student-mark)                                                       |
 | Receive money from a student                                                        | [`pay` command](#receiving-money-from-a-student-pay)                                            |
-| View the students under you                                                         | [`list` command](#viewing-all-students-list)                                                    |
-| Search for student's information                                                    | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                               | [sequence of commands](#next-available-class)                                                   |
-| Set a student's next class                                                          | [`edit` command](#editing-student-details-edit)                                                 |
-| Taking notes                                                                        | [`edit` command](#editing-student-details-edit)                                                 | 
+| View your students                                                                  | [`list` command](#viewing-all-students-list)                                                    |
+| Search for a student's information                                                  | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
+| Find next available class in your schedule                                          | [sequence of commands](#next-available-class)                                                   |
+| Set a student's class                                                               | [`edit` command](#editing-student-details-edit)                                                 |
+| Take notes                                                                          | [`edit` command](#editing-student-details-edit)                                                 | 
 | Remove a student                                                                    | [`delete` command](#deleting-students-delete)                                                   |
 
 ### Viewing help: `help`
@@ -757,19 +757,31 @@ Q: How do I transfer my data to another Computer?
 
 A: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous **Teacher's Pet** home folder.
 
+Q: Do I need to save my data before exiting the application?
+
+A: Student records are automatically saved after any command that changes the data. There is no need to save manually.
+
+Q: Why is Teacher's Pet not running?
+
+A: Follow the following procedure to open the application correctly.
+1. Put the JAR file in an empty folder.
+2. Open Command Prompt if you are using Windows or Terminal if you are using macOS. Run the java -version command to ensure you are using Java 11. Do this again even if you did this before, as your OS might have auto-updated the default Java version to a newer version.
+3. Launch the jar file using the java -jar teachersPet.jar command.
+
 [↑ Back to top](#table-of-contents)
 
 ---
 ## Glossary
 
-| Terms       | Definition                                                  |
-|-------------|-------------------------------------------------------------|
-| Class Date  | The 1-1 tutoring time slot of a student                     |
-| Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON      |
-| INDEX       | The index number shown in the [Student List](#ui-overview)  |
-| INDEX-S     | The index number shown in the [Schedule List](#ui-overview) |
-| Prefix      | e.g., `n/`, `p/`, `np/`                                     |
-| Parameter   | e.g., `NAME`, `EMAIL`, `ADDRESS`                            |
+| Terms       | Definition                                                                                  |
+|-------------|---------------------------------------------------------------------------------------------|
+| Class Date  | The 1-1 tutoring time slot of a student                                                     |
+| Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON                                      |
+| INDEX       | The index number shown in the [Student List](#ui-overview)                                  |
+| INDEX-S     | The index number shown in the [Schedule List](#ui-overview)                                 |
+| Prefix      | The format to indicate a specific type of information. e.g., `n/`, `p/`, `e/`                |
+| Parameter   | The additional input provided along with the command word. e.g., `NAME`, `EMAIL`, `ADDRESS` |
+
 
 [↑ Back to top](#table-of-contents)
 
