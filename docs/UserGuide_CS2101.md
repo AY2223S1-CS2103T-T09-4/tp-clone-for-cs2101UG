@@ -15,13 +15,13 @@ In order to help speed up your workflow, we have created commands for tasks you 
 | Add a new student                                                                    | [`add` command](#adding-a-student-add)                                                          |
 | Edit a student's details (phone number, address for example)                         | [`edit` command](#editing-student-details-edit)                                                 |
 | Mark a student's attendance and remind yourself to collect payment from the student. | [`mark` command](#marking-a-student-mark)                                                       |
-| Receive money from a student                                                          | [`pay` command](#receiving-money-from-a-student-pay)                                            |
-| Know the students you have                                                           | [`list` command](#viewing-all-students-list)                                                    |
+| Receive money from a student                                                         | [`pay` command](#receiving-money-from-a-student-pay)                                            |
+| View the students under you                                                          | [`list` command](#viewing-all-students-list)                                                    |
 | Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
 | Find next available class for student                                                | [sequence of commands](#next-available-class)                                                   |
 | Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
 | Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                   |
+| Remove a student as he quits the tuition                                             | [`delete` command](#deleting-students-delete)                                                   |
 
 Before you get started, you may want to know [how to navigate this User Guide](#reading-the-user-guide).
 
@@ -355,8 +355,8 @@ Examples:
 ![UiEdit](images/UG-screenshots/UiEditBefore.png)
 ![UiEdit](images/UG-screenshots/UiEditAfter.png)
 
-- Type `edit 7 dt/2022-11-07 1200-1300` in the [Command Input](#ui-overview). The index 1 student of the
-  [Student List](#ui-overview) will have his or her class date updated to `2022-10-30 1100-1200` 
+- Type `edit 7 dt/2022-11-07 1200-1300` in the [Command Input](#ui-overview). The index 7 student of the
+  [Student List](#ui-overview) will have his or her class date updated to `2022-11-07 1200-1300` 
   in this case. Notice that the [Schedule List](#ui-overview) has now been updated.
 
 ![UiEdit2](images/UG-screenshots/UiEditBefore2.png)
@@ -625,9 +625,9 @@ The following are fields supported by the `sort` command:
 
 #### Sort by Name
 
-Sorts the list of students in the [Student List](#ui-overview) by `name` and given `ORDER`.
+Sorts the list of students in the [Student List](#ui-overview) by `NAME` and given `ORDER`.
 
-If `ORDER` is left blank, it will be `asc` by default.
+If `ORDER` is left blank, it will be `ASC` by default.
 
 Examples:
 
@@ -679,7 +679,7 @@ Format: `delete INDEX [MORE_INDEXES]`
 
 - Deletes the student(s) at the specified `INDEX(ES)`.
 - The index(es) refers to the index numbers shown in the [Student List](#ui-overview) (bottom left section of the display).
-- The index(es) must be found on the displayed student list. e.g., `1, 2, 3, ...`.
+- The index(es) must be found on the [Student List](#ui-overview). e.g., `1, 2, 3, ...`.
 
 Examples:
 - `list` followed by `delete 1 2` deletes the 1st and 2nd student in the [Student List](#ui-overview).
@@ -777,21 +777,21 @@ A: Install the app in the other computer and overwrite the empty data file it cr
 
 [](#exiting-the-program-exit)
 
-| Action                                                                 | Format, Examples                                                                                                                                                                                                                                        |
-|------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Get help](#viewing-help-help)                                         | `help`                                                                                                                                                                                                                                                  |
-| [Add a student](#adding-a-student-add)                                 | add n/NAME p/CONTACT_NUMBER np/NEXT_OF_KIN_CONTACT_NUMBER a/ADDRESS e/EMAIL [t/TAG]... e.g., `add n/John Doe p/98765432 np/90123291 a/Street ABC e/johnd@example.com t/python t/beginner`                                                               |
+| Action                                                                 | Format, Examples                                                                                                                                                                                                                                           |
+|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Get help](#viewing-help-help)                                         | `help`                                                                                                                                                                                                                                                     |
+| [Add a student](#adding-a-student-add)                                 | add n/NAME p/CONTACT_NUMBER np/NEXT_OF_KIN_CONTACT_NUMBER a/ADDRESS e/EMAIL [t/TAG]... e.g., `add n/John Doe p/98765432 np/90123291 a/Street ABC e/johnd@example.com t/python t/beginner`                                                                  |
 | [Edit a student](#editing-student-details-edit)                        | edit `INDEX` [n/NAME] [p/CONTACT_NUMBER] [np/NEXT_OF_KIN_CONTACT_NUMBER] [a/ADDRESS] [e/EMAIL] [dt/CLASS_DATE] [paid/AMOUNT_PAID] [owed/AMOUNT_OWED] [rate/RATES_PER_CLASS] [nt/ADDITIONAL_NOTES] [nt-a/ADDITIONAL_NOTES_APPEND] e.g., `edit 2 p/98765431` |
-| [Mark a student](#marking-a-student-mark)                              | mark `INDEX-s` e.g., `mark 2`                                                                                                                                                                                                                           |
-| [Receive money from a student](#receiving-money-from-a-student-pay)    | pay `INDEX-s` `AMOUNT_PAID` e.g., `pay 2 300`                                                                                                                                                                                                           |
-| [List all students](#viewing-all-students-list)                        | `list`                                                                                                                                                                                                                                                  |
-| [Find a student](#finding-a-student-find)                              | find n/NAME e.g., `find n/John Doe` or other supported fields                                                                                                                                                                                           |
-| [Find available time slots](#next-available-class)                     | refer to link under Action                                                                                                                                                                                                                              |
-| [Sort students in particular order](#sort-the-displayed-students-sort) | sort `TYPE` `[ORDER]` e.g., `sort NAME ASC`                                                                                                                                                                                                             |
-| [Delete a student](#deleting-students-delete)                          | delete `INDEX` e.g., `delete 2`                                                                                                                                                                                                                         |
-| [Clear all students](#clearing-all-student-clear)                      | `clear`                                                                                                                                                                                                                                                 |
-| [Undo a command](#undo-the-last-command-undo)                          | `undo`                                                                                                                                                                                                                                                  |
-| [Exit **Teacher's Pet**](#exiting-the-program-exit)                    | `exit`                                                                                                                                                                                                                                                  |
+| [Mark a student](#marking-a-student-mark)                              | mark `INDEX-s` e.g., `mark 2`                                                                                                                                                                                                                              |
+| [Receive money from a student](#receiving-money-from-a-student-pay)    | pay `INDEX-s` `AMOUNT_PAID` e.g., `pay 2 300`                                                                                                                                                                                                              |
+| [List all students](#viewing-all-students-list)                        | `list`                                                                                                                                                                                                                                                     |
+| [Find a student](#finding-a-student-find)                              | find n/NAME e.g., `find n/John Doe` or other supported fields                                                                                                                                                                                              |
+| [Find available time slots](#next-available-class)                     | refer to link under Action                                                                                                                                                                                                                                 |
+| [Sort students in particular order](#sort-the-displayed-students-sort) | sort `TYPE` `[ORDER]` e.g., `sort NAME ASC`                                                                                                                                                                                                                |
+| [Delete a student](#deleting-students-delete)                          | delete `INDEX` e.g., `delete 2`                                                                                                                                                                                                                            |
+| [Clear all students](#clearing-all-student-clear)                      | `clear`                                                                                                                                                                                                                                                    |
+| [Undo a command](#undo-the-last-command-undo)                          | `undo`                                                                                                                                                                                                                                                     |
+| [Exit **Teacher's Pet**](#exiting-the-program-exit)                    | `exit`                                                                                                                                                                                                                                                     |
 
 [↑ Back to top](#table-of-contents)
 
