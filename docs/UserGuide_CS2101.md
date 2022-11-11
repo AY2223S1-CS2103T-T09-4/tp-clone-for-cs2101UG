@@ -175,14 +175,14 @@ These are the main features of **Teacher's Pet**:
 | Task                                                                                | Command                                                                                         |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | Add a new student                                                                   | [`add` command](#adding-a-student-add)                                                          |
-| Edit a student's details (phone number, address for example)                        | [`edit` command](#editing-student-details-edit)                                                 |
+| Edit a student's details (e.g. phone number, address)                               | [`edit` command](#editing-student-details-edit)                                                 |
 | Mark a student's attendance and remind yourself to collect payment from the student | [`mark` command](#marking-a-student-mark)                                                       |
 | Receive money from a student                                                        | [`pay` command](#receiving-money-from-a-student-pay)                                            |
-| View the students under you                                                         | [`list` command](#viewing-all-students-list)                                                    |
-| Search for student's information                                                    | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                               | [sequence of commands](#next-available-class)                                                   |
+| View your students                                                                  | [`list` command](#viewing-all-students-list)                                                    |
+| Search for a student's information                                                  | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
+| Find next available class in your schedule                                          | [sequence of commands](#next-available-class)                                                   |
 | Set a student's next class                                                          | [`edit` command](#editing-student-details-edit)                                                 |
-| Taking notes                                                                        | [`edit` command](#editing-student-details-edit)                                                 | 
+| Take notes                                                                          | [`edit` command](#editing-student-details-edit)                                                 | 
 | Remove a student                                                                    | [`delete` command](#deleting-students-delete)                                                   |
 
 ### Viewing help: `help`
