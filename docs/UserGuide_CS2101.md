@@ -181,7 +181,7 @@ These are the main features of **Teacher's Pet**:
 | View your students                                                                  | [`list` command](#viewing-all-students-list)                                                    |
 | Search for a student's information                                                  | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
 | Find next available class in your schedule                                          | [sequence of commands](#next-available-class)                                                   |
-| Set a student's next class                                                          | [`edit` command](#editing-student-details-edit)                                                 |
+| Set a student's class                                                               | [`edit` command](#editing-student-details-edit)                                                 |
 | Take notes                                                                          | [`edit` command](#editing-student-details-edit)                                                 | 
 | Remove a student                                                                    | [`delete` command](#deleting-students-delete)                                                   |
 
