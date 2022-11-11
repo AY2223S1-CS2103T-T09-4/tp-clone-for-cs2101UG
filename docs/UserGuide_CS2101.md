@@ -4,9 +4,9 @@ title: **Teacher's Pet** User Guide
 ---
 **Teacher’s Pet** is an all-in-one desktop application for 1-to-1 tutors to manage the details of students,
 payment and scheduling of classes. Instead of switching between calendar, contacts, notes and Microsoft Excel,
-**Teacher's Pet** consolidates everything into one application, reducing the need for
-context switching. With short commands and intuitive design, **Teacher's Pet** reduces time needed 
-for tedious administrative work, allowing you to focus on your students.
+**Teacher's Pet** consolidates your tasks into one application, reducing the need for
+context switching. Complete with an intuitive design and easy-to-use commands, **Teacher's Pet** lightens 
+the load of tedious administrative work, allowing you to focus on your students.
 
 In order to help speed up your workflow, we have created commands for tasks you would usually need to do as a tutor.
 
