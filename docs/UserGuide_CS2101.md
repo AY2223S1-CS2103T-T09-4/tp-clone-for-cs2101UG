@@ -21,7 +21,7 @@ In order to help speed up your workflow, we have created commands for tasks you 
 | Find next available class for student                                                | [sequence of commands](#next-available-class)                                                   |
 | Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
 | Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he quits the tuition                                             | [`delete` command](#deleting-students-delete)                                                   |
+| Remove a student as he stopped tuition                                               | [`delete` command](#deleting-students-delete)                                                   |
 
 Before you get started, you may want to know [how to navigate this User Guide](#reading-the-user-guide).
 
@@ -183,7 +183,7 @@ These are the main features of **Teacher's Pet**:
 | Find next available class for student                                               | [sequence of commands](#next-available-class)                                                   |
 | Set a student's next class                                                          | [`edit` command](#editing-student-details-edit)                                                 |
 | Taking notes                                                                        | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he quits the tuition                                            | [`delete` command](#deleting-students-delete)                                                   |
+| Remove a student as he stopped tuition                                              | [`delete` command](#deleting-students-delete)                                                   |
 
 ### Viewing help: `help`
 
@@ -202,12 +202,12 @@ Format: `help`
 
 The `add` command adds a student to **Teacher’s Pet**. You can add the following fields to a student.
 
-- [Student’s Name (`n/`)](#add-students-name)
-- [Student's Contact Number (`p/`)](#add-students-contact-number)
-- [Next of Kin’s Contact Number (`np/`)](#add-next-of-kins-contact-number)
-- [Address (`a/`)](#add-address)
-- [Email (`e/`)](#add-email)
-- [Tag (`t/`)](#add-tag)
+- [Student’s Name (`n/`)](#add-students-name-n)
+- [Student's Contact Number (`p/`)](#add-students-contact-number-p)
+- [Next of Kin’s Contact Number (`np/`)](#add-next-of-kins-contact-number-np)
+- [Address (`a/`)](#add-address-a)
+- [Email (`e/`)](#add-email-e)
+- [Tag (`t/`)](#add-tag-t)
 
 The following are the fields accepted by the `add` command and their relevant conditions which need to be met for the
 command to work as expected.
@@ -287,17 +287,17 @@ under a student.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Student's Name, Student's Contact Number, Next of Kin’s Contact Number, Email, Address and Tag follow the same convention as under the add command.
 </div>
 
-- [Student’s Name `n/`](#add-students-name)
-- [Student's Contact Number `p/`](#add-students-contact-number)
-- [Next of Kin’s Contact Number `np/`](#add-next-of-kins-contact-number)
-- [Address `a/`](#add-address)
-- [Email `e/`](#add-email)
-- [Tag `t/`](#add-tag)
-- [Class Date `dt/`](#edit-class-date)
-- [Amount Paid `paid/`](#edit-amount-paid)
-- [Amount Owed `owed/`](#edit-amount-owed)
-- [Rates per Class `rate/`](#edit-rates-per-class)
-- [Additional Notes `nt/`](#edit-additional-notes)
+- [Student’s Name `n/`](#add-students-name-n)
+- [Student's Contact Number `p/`](#add-students-contact-number-p)
+- [Next of Kin’s Contact Number `np/`](#add-next-of-kins-contact-number-np)
+- [Address `a/`](#add-address-a)
+- [Email `e/`](#add-email-e)
+- [Tag `t/`](#add-tag-t)
+- [Class Date `dt/`](#edit-class-date-dt)
+- [Amount Paid `paid/`](#edit-amount-paid-paid)
+- [Amount Owed `owed/`](#edit-amount-owed-owed)
+- [Rates per Class `rate/`](#edit-rates-per-class-rate)
+- [Additional Notes `nt/`](#edit-additional-notes-nt)
 
 The following are the fields accepted by the `edit` command and their relevant conditions which need to be met for the
 command to work as expected.
