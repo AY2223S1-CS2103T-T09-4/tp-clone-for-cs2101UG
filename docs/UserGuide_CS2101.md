@@ -773,14 +773,14 @@ A: Follow the following procedure to open the application correctly.
 ---
 ## Glossary
 
-| Terms       | Definition                                                  |
-|-------------|-------------------------------------------------------------|
-| Class Date  | The 1-1 tutoring time slot of a student                     |
-| Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON      |
-| INDEX       | The index number shown in the [Student List](#ui-overview)  |
-| INDEX-s     | The index number shown in the [Schedule List](#ui-overview) |
-| Prefix      | e.g., `n/`, `p/`, `np/`                                     |
-| Parameter   | e.g., `NAME`, `EMAIL`, `ADDRESS`                            |
+| Terms       | Definition                                                                                  |
+|-------------|---------------------------------------------------------------------------------------------|
+| Class Date  | The 1-1 tutoring time slot of a student                                                     |
+| Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON                                      |
+| INDEX       | The index number shown in the [Student List](#ui-overview)                                  |
+| INDEX-s     | The index number shown in the [Schedule List](#ui-overview)                                 |
+| Prefix      | The form to indicate a specific type of information. e.g., `n/`, `p/`, `e/`                 |
+| Parameter   | The additional input provided along with the command word. e.g., `NAME`, `EMAIL`, `ADDRESS` |
 
 [↑ Back to top](#table-of-contents)
 
