@@ -295,7 +295,7 @@ under a student.
 - [Tag `t/`](#add-tag)
 - [Class Date `dt/`](#edit-class-date)
 - [Amount Paid `paid/`](#edit-amount-paid)
-- [Amount Owed `owed/`(#edit-amount-owed)
+- [Amount Owed `owed/`](#edit-amount-owed)
 - [Rates per Class `rate/`](#edit-rates-per-class)
 - [Additional Notes `nt/`](#edit-additional-notes)
 
