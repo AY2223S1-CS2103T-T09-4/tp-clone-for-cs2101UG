@@ -2,10 +2,10 @@
 layout: page
 title: **Teacher's Pet** User Guide
 ---
-**Teacher’s Pet** is an all-in-one desktop application for private 1-to-1 tutors to manage the details of students,
-payment and scheduling of classes. **Teacher's Pet** combines the tasks you would typically need to do when you use 
-Microsoft Excel, calendar, your phone contacts and your notes application into one application, reducing the need for
-context switching. With short commands and an intuitive design, **Teacher's Pet** reduces time needed 
+**Teacher’s Pet** is an all-in-one desktop application for 1-to-1 tutors to manage the details of students,
+payment and scheduling of classes. Instead of switching between calendar, contacts, notes and Microsoft Excel,
+**Teacher's Pet** consolidates everything into one application, reducing the need for
+context switching. With short commands and intuitive design, **Teacher's Pet** reduces time needed 
 for tedious administrative work, allowing you to focus on your students.
 
 In order to help speed up your workflow, we have created commands for tasks you would usually need to do as a tutor.
@@ -13,14 +13,14 @@ In order to help speed up your workflow, we have created commands for tasks you 
 | Task                                                                                 | Command                                                                                         |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | Add a new student                                                                    | [`add` command](#adding-a-student-add)                                                          |
-| Edit a student's details (phone number, address for example)                         | [`edit` command](#editing-student-details-edit)                                                 |
+| Edit a student's details (e.g. phone number, address)                                | [`edit` command](#editing-student-details-edit)                                                 |
 | Mark a student's attendance and remind yourself to collect payment from the student. | [`mark` command](#marking-a-student-mark)                                                       |
-| Receive money from a student                                                          | [`pay` command](#receiving-money-from-a-student-pay)                                            |
-| Know the students you have                                                           | [`list` command](#viewing-all-students-list)                                                    |
-| Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                                | [sequence of commands](#next-available-class)                                                   |
-| Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
-| Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
+| Receive money from a student                                                         | [`pay` command](#receiving-money-from-a-student-pay)                                            |
+| View your students                                                                   | [`list` command](#viewing-all-students-list)                                                    |
+| Search for a student's information                                                   | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
+| Find next available class in your schedule                                           | [sequence of commands](#next-available-class)                                                   |
+| Set a student's class                                                                | [`edit` command](#editing-student-details-edit)                                                 |
+| Take notes                                                                           | [`edit` command](#editing-student-details-edit)                                                 | 
 | Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                   |
 
 Before you get started, you may want to know [how to navigate this User Guide](#reading-the-user-guide).
