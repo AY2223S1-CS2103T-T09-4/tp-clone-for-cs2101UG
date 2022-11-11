@@ -779,7 +779,7 @@ A: Follow the following procedure to open the application correctly.
 | Day-of-Week | 3-letter Abbreviation; case-insensitive e.g., Mon, MON                                      |
 | INDEX       | The index number shown in the [Student List](#ui-overview)                                  |
 | INDEX-S     | The index number shown in the [Schedule List](#ui-overview)                                 |
-| Prefix      | The form to indicate a specific type of information. e.g., `n/`, `p/`, `e/`                 |
+| Prefix      | The format to indicate a specific type of information. e.g., `n/`, `p/`, `e/`                |
 | Parameter   | The additional input provided along with the command word. e.g., `NAME`, `EMAIL`, `ADDRESS` |
 
 
