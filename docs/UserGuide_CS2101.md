@@ -18,10 +18,10 @@ In order to help speed up your workflow, we have created commands for tasks you 
 | Receive money from a student                                                          | [`pay` command](#receiving-money-from-a-student-pay)                                            |
 | Know the students you have                                                           | [`list` command](#viewing-all-students-list)                                                    |
 | Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                                | [`avail` command](#next-available-class-avail)                                                  |
+| Find next available class for student                                                | [sequence of commands](#next-available-class)                                                   |
 | Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
 | Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                                              |
+| Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                   |
 
 Before you get started, you may want to know [how to navigate this User Guide](#reading-the-user-guide).
 
@@ -58,7 +58,7 @@ commands and <a href="#prefix-summary">prefix summary</a> for summary of prefixe
       * [Find by Next of Kin's Contact Number](#find-by-next-of-kins-contact-number)
       * [Find by Class Date](#find-by-class-date)
       * [Find by Tag](#find-by-tag)
-    * [Next available class:](#next-available-class-avail)
+    * [Next available class](#next-available-class)
     * [Sort displayed students: `sort`](#sort-the-displayed-students-sort)
       * [Sort by Name](#sort-by-name)
       * [Sort by Class](#sort-by-class-date)
@@ -174,19 +174,19 @@ The callouts icons below will be useful when you are reading this user guide.
 ## Features
 These are the main features of **Teacher's Pet**:
 
-| Task                                                                                 | Command                                                                                         |
-|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| Add a new student                                                                    | [`add` command](#adding-a-student-add)                                                          |
-| Edit a student's details (phone number, address for example)                         | [`edit` command](#editing-student-details-edit)                                                 |
-| Mark a student's attendance and remind yourself to collect payment from the student. | [`mark` command](#marking-a-student-mark)                                                       |
-| Receive money from a student                                                          | [`pay` command](#receiving-money-from-a-student-pay)                                            |
-| Know the students you have                                                           | [`list` command](#viewing-all-students-list)                                                    |
-| Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort) |
-| Find next available class for student                                                | [`avail` command](#next-available-class-avail)                                                  |
-| Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                                 |
-| Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                                 | 
-| Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                                              |
 
+| Task                                                                                 | Command                                                                                       |
+|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| Add a new student                                                                    | [`add` command](#adding-a-student-add)                                                        |
+| Edit a student's details (phone number, address for example)                         | [`edit` command](#editing-student-details-edit)                                               |
+| Mark a student's attendance and remind yourself to collect payment from the student. | [`mark` command](#marking-a-student-mark)                                                     |
+| Receive money from a student                                                          | [`pay` command](#receiving-money-from-a-student-pay)                                          |
+| Know the students you have                                                           | [`list` command](#viewing-all-students-list)                                                  |
+| Search for student's information                                                     | [`find` command](#finding-a-student-find) / [`sort` command](#sort-the-displayed-students-sort)|
+| Find next available class for student                                                | [sequence of commands](#next-available-class)                                                 |
+| Set a student's next class                                                           | [`edit` command](#editing-student-details-edit)                                               |
+| Taking notes                                                                         | [`edit` command](#editing-student-details-edit)                                               | 
+| Remove a student as he is no longer a student                                        | [`delete` command](#deleting-students-delete)                                                 |
 
 ### Viewing help: `help`
 
@@ -203,19 +203,26 @@ Format: `help`
 
 ### Adding a student: `add`
 
-The `add` command adds a student to **Teacher’s Pet**.
+The `add` command adds a student to **Teacher’s Pet**. You can add the following fields to a student.
+
+- [Student’s Name](#add-students-name)
+- [Student's Contact Number](#add-students-contact-number)
+- [Next of Kin’s Contact Number](#add-next-of-kins-contact-number)
+- [Address](#add-address)
+- [Email](#add-email)
+- [Tag](#add-tag)
 
 The following are the fields accepted by the `add` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-##### Student’s Name (`n/`):
-    - Student’s Name must not be empty.
-    - Student’s Name must only contain alphanumeric characters.
+#### Add Student’s Name (`n/`):
+- Student’s Name must not be empty.
+- Student’s Name must only contain alphanumeric characters.
     
 <div markdown="span" class="alert alert-info">ℹ **Note:** Multiple students may share the same name.
 </div>
 
-##### Student’s Contact Number (`p/`):
+#### Add Student’s Contact Number (`p/`):
 - Student’s contact number must not be empty. 
 - Student’s contact number must only contain numerical digits between `0` and `9`.
 - Student's contact number must begin with `6`, `8` or `9`.
@@ -223,7 +230,7 @@ command to work as expected.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Contact number must contain exactly 8 digits. Contact number must be unique.
 </div>
 
-##### Next of Kin’s Contact Number (`np/`):
+#### Add Next of Kin’s Contact Number (`np/`):
 - Next of Kin’s contact number must not be empty.
 - Next of Kin’s contact number must only contain numerical digits 
   between `0` and `9`.
@@ -232,16 +239,14 @@ command to work as expected.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Next of Kin’s contact number must contain exactly 8 digits.
 </div>
 
-
-##### Address (`a/`):
+#### Add Address (`a/`):
 - Address must not be empty.
 - Address may contain any kinds of character.
 
 <div markdown="span" class="alert alert-info">ℹ **Note:** Address cannot be empty. It must contain at least 1 character.
 </div>
 
-##### Email (`e/`):
-
+#### Add Email (`e/`):
 - Email must not be empty. 
 - Email should be in the format of `local@domain`, where:
   - Local address should only contain alphanumeric characters and these special 
@@ -253,7 +258,7 @@ command to work as expected.
     3. Have each domain label consist of alphanumeric characters, separated
        only by hyphens, if any.
 
-##### Tags (`t/`):
+#### Add Tag (`t/`):
 - Tags are optional.
 - A student can have any number of tags (including 0).
 - Tags must only contain alphanumeric characters.
@@ -261,8 +266,7 @@ command to work as expected.
 <div markdown="span" class="alert alert-info">ℹ **Note:** Tags must contain at least 1 alphanumeric character, cannot contain spacings and limited to `40` characters long.
 </div>
 
-Format: 
-- `add n/NAME p/CONTACT_NUMBER np/NEXT_OF_KIN_CONTACT_NUMBER e/EMAIL a/ADDRESS [t/TAG]…`
+Format: `add n/NAME p/CONTACT_NUMBER np/NEXT_OF_KIN_CONTACT_NUMBER e/EMAIL a/ADDRESS [t/TAG]…`
 
 Example:
 Type `add n/Ben Tan p/87201223 np/90125012 e/BenTan@gmail.com a/Avenue 712` in the [Command Input](#ui-overview),
@@ -283,24 +287,25 @@ a student named Ben Tan will be added to the bottom of the [Student List](#ui-ov
 The `edit` command edits an existing student under [Student List](#ui-overview). You can edit the following fields 
 under a student.
 
-- Student’s Name - `n/`
-- Student's Contact Number - `p/`
-- Next of Kin’s Contact Number - `np/`
-- Address - `a/`
-- Email - `e/`
-- Class Date - `dt/`
-- Amount Paid - `paid/`
-- Amount Owed - `owed/`
-- Rates per Class - `rate/`
-- Additional Notes - `nt/`
-- Tag - `t/`
+<div markdown="span" class="alert alert-info">ℹ **Note:** Student's Name, Student's Contact Number, Next of Kin’s Contact Number, Email, Address and Tag follow the same convention as under the add command.
+</div>
+
+- [Student’s Name `n/`](#add-students-name)
+- [Student's Contact Number `p/`](#add-students-contact-number)
+- [Next of Kin’s Contact Number `np/`](#add-next-of-kins-contact-number)
+- [Address `a/`](#add-address)
+- [Email `e/`](#add-email)
+- [Tag `t/`](#add-tag)
+- [Class Date `dt/`](#edit-class-date)
+- [Amount Paid `paid/`](#edit-amount-paid)
+- [Amount Owed `owed/`(#edit-amount-owed)
+- [Rates per Class `rate/`](#edit-rates-per-class)
+- [Additional Notes `nt/`](#edit-additional-notes)
 
 The following are the fields accepted by the `edit` command and their relevant conditions which need to be met for the
 command to work as expected.
 
-##### Student's Name (`n/`), Student's Contact Number (`p/`), Next of Kin’s Contact Number (`np/`), Email (`e/`), Address (`a/`) and Tag (`t/`) follow the same convention as [adding a student](#adding-a-student-add).
-
-##### Class Date (`dt/`):
+#### Edit Class Date (`dt/`):
 - Class date can be left empty.
 - Formats: `dt/` must be followed by either one of the below options.
     1. `yyyy-MM-dd 0000-2359`
@@ -315,25 +320,25 @@ command to work as expected.
 <div markdown="span" class="alert alert-danger">❗ **Caution:** If a chosen date is occupied by another student, a class conflict error will arise.
 </div>
 
-##### Amount Paid (`paid/`):
+#### Edit Amount Paid (`paid/`):
 - Amount Paid stands for the amount that has been paid by the Student.
 - Format: `paid/` must be followed by an integer.
 - Amount paid can only be an integer.
 - Amount paid must be non-negative.
 
-##### Amount Owed (`owed/`):
+#### Edit Amount Owed (`owed/`):
 - Amount Owed stands for the amount that has been owed by the Student.
 - Format: `owed/` must be followed by an integer.
 - Amount owed can only be an integer.
 - Amount owed must be non-negative.
 
-##### Rates per Class (`rate/`):
+#### Edit Rates per Class (`rate/`):
 - Rates per Class stands for the amount of charge per Class for the Student.
 - Format: `rate/` must be followed by an integer.
 - Rates per Class can only be an integer.
 - Rates per Class must be non-negative.
 
-##### Additional Notes (`nt/`):
+#### Edit Additional Notes (`nt/`)
 - Additional notes can be left empty.
 - Additional notes can take in any types of character.
 - Use `nt/` to set the additional notes.
@@ -567,20 +572,22 @@ Examples:
 
 #### Find by Tag:
 
-Finds all students with a particular [tag](#tags).
+Finds all students with a particular tag.
 
-Format: `find t/TAG_NAME`
+Format: `find t/TAG…`
 
-- Only one tag can be searched at each time.
-
-<div markdown="span" class="alert alert-danger">❗ **Caution:** Do not include more than one tag such as find t/python java.
-</div>
+- You can have more than one tag that can be searched at each time.
+- The tag is case-insensitive.
 
 Examples:
 
-`find t/python` returns all students who have python as a tag, including students who have other tags on top of the
-python tag.
-`find dt/javascript` returns all students with javascript as a tag and other tags besides javascript.
+* `find t/python` returns all students who have a python tag, including students who have other tags on top of the
+  python tag.
+* `find t/javascript` returns all students who have a javascript tag, including students who have other tags on top
+  of javascript tag
+* `find t/python t/javascript` returns all students who have javascript and python tags, including students who have
+  other tags on top of the two tags.
+* 
 
 [↑ Back to top](#table-of-contents)
 
@@ -615,6 +622,11 @@ Format: `sort TYPE [ORDER]`
 - The default order for `NAME` and `CLASS` is `ASC` while for `OWED`, the default order is `DESC`.
 - The parameters `TYPE` and `ORDER` are case-insensitive.
 - When two students are **in a tie** for the compared `TYPE`, they will be sorted according to their **names** in **ascending** order by default.
+
+The following are fields supported by the `sort` command:
+- [Name](#sort-by-name)
+- [Class Date](#sort-by-class-date)
+- [Money Owed](#sort-by-money-owed)
 
 [↑ Back to top](#table-of-contents)
 
