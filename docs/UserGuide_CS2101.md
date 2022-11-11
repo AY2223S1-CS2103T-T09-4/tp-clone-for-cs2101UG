@@ -40,7 +40,7 @@ can simplify head down to the bottom of the screen and refer to the <a href="#gl
 * [Overview of User Interface](#ui-overview)
 * [Reading the User Guide](#reading-the-user-guide)
     * [Command format](#notes-about-the-command-format)
-    * [Callouts](#callouts)
+    * [Annotations](#annotations)
 * [Features](#features)
     * [Viewing help: `help`](#viewing-help-help)
     * [Adding a student: `add`](#adding-a-student-add)
